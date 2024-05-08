@@ -7,7 +7,7 @@ public class Solution {
 
         for(int i = 0; i < l; i++)
         {
-            myDict[score[i]] = i;
+            myDict.Add(score[i], i);
         }
 
         Array.Sort(score,(x,y) => y.CompareTo(x));

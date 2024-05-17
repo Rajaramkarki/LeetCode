@@ -1,7 +1,6 @@
 public class Solution {
     public bool MakeEqual(string[] words) {
         Dictionary<char, int> myDict = new Dictionary<char, int>();
-        int count = 0;
 
         for(int i = 0; i < words.Length; i++)
         {
@@ -17,18 +16,11 @@ public class Solution {
 
         foreach(var entry in myDict)
         {
-            if(entry.Value % words.Length == 0)
-                continue;
-
-            else
-                count++;
+            if(entry.Value % words.Length != 0)
+                return false;
         }
 
-        if(count > 0)
-            return false;
-
-        else
-            return true;
+        return true;
 
 
     
